@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GOVIND YADAV- Portfolio</title>
+  <style>
+    /* Base Styles */
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        padding: 20px 10%;
+    }
+
+    /* Navigation */
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links li a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        transition: color 0.3s;
+    }
+
+    .nav-links li a:hover {
+        color: #FFD700;
+    }
+
+    /* Header Text */
+    .header-text {
+        font-size: 30px;
+        margin-top: 20%;
+    }
+
+    .header-text h1 span {
+        color: #FFD700;
+    }
+
+    /* About Section */
+    .about {
+        padding: 30px 10%;
+        text-align: center;
+    }
+
+    .about h1 {
+        font-size: 36px;
+        color:#FFD700;
+    }
+
+    .about p {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    /* Skills Section */
+    .skills {
+        padding: 30px 10%;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .skills h1 {
+        width: 100%;
+        font-size: 36px;
+        color: #FFD700;
+        margin-bottom: 20px;
+    }
+
+    .skill {
+        width: 100px;
+        text-align: center;
+    }
+
+    .skill img {
+        width: 50px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .skill p {
+        font-size: 14px;
+        margin: 0;
+    }
+
+    /* Projects Section */
+    .projects {
+        padding: 30px 10%;
+        text-align: center;
+    }
+
+    .projects h1 {
+        font-size: 36px;
+        color: #FFD700;
+        margin-bottom: 20px;
+    }
+
+    .projects-container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding: 20px 0;
+        justify-content: flex-start;
+    }
+
+    .project {
+        background-color: #1e1e1e;
+        padding: 10px;
+        border-radius: 8px;
+        width: 220px;
+        box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+        text-align: center;
+        flex: 0 0 auto;
+    }
+
+    .project img {
+        width: 100%;
+        height: 70px;
+        object-fit: cover;
+        border-radius: 4px;
+        margin-bottom: 8px;
+    }
+
+    .project h2 {
+        font-size: 16px;
+        margin: 8px 0 5px;
+        color:#FFD700;
+    }
+
+    .project p {
+        font-size: 12px;
+        color: #ccc;
+    }
+
+    /* Education Section */
+    .education {
+        padding: 30px 10%;
+        text-align: center;
+    }
+
+    .education h1 {
+        font-size: 36px;
+        color: #FFD700;
+        margin-bottom: 20px;
+    }
+
+    .education-container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .education-item {
+        background-color: #1e1e1e;
+        padding: 10px;
+        border-radius: 8px;
+        width: 220px;
+        box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+        text-align: center;
+    }
+
+    .education-item h2 {
+        font-size: 16px;
+        margin: 8px 0 5px;
+        color: #FFD700;
+    }
+
+    .education-item p {
+        font-size: 12px;
+        color: #ccc;
+    }
+
+    /* Contact Section */
+    .contact {
+        padding: 30px 10%;
+        text-align: center;
+    }
+
+    .contact h1 {
+        font-size: 36px;
+        color: #FFD700;
+        margin-bottom: 20px;
+    }
+
+    .contact p {
+        margin: 8px 0;
+        font-size: 16px;
+    }
+
+    .contact a {
+        color: #FFD700;
+        text-decoration: none;
+    }
+
+    .contact a:hover {
+        text-decoration: underline;
+    }
+
+    .typing {
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: 2px solid #FFD700;
+        color: #FFD700;
+        font-size: 45px;
+        animation: typing 2.5s steps(12, end) forwards, remove-caret 0s forwards;
+        animation-delay: 0s, 2.5s;
+    }
+
+    /* Typing animation */
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        to {
+            width: 16ch;
+        }
+    }
+
+    @keyframes remove-caret {
+        to {
+            border-right: none;
+        }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <div class="logo">Govind Yadav</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-text">
+      <p> Front end Developer & Data Analyst </p>
+      <h1>Hi, I'm <span class="typing">GOVIND YADAV</span><br>from Lucknow</h1>
+    </div>
+  </div>
+
+  <div class="about" id="about">
+    <h1>About Me</h1>
+    <p>I am a passionate Front end Developer and Data Analyst with expertise in various technologies and also a programmer, mostly I prefer C++ language to solve DSA problems. I enjoy solving complex problems and building scalable solutions.</p>
+  </div>
+
+  <div class="skills" id="skills">
+    <h1>Technical Skills</h1>
+    <div class="skill"><img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++"><p>C++</p></div>
+    <div class="skill"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python"><p>Python</p></div>
+    <div class="skill"><img src="https://www.citypng.com/public/uploads/preview/hd-mysql-logo-transparent-background-701751694771788209ydqoapx.png" alt="MySQL"><p>MySQL</p></div>
+    <div class="skill"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDkSIlrHe6JFTQQrcnMcqTU-5GVY0LTB7ibg&s" alt="NumPy"><p>NumPy</p></div>
+    <div class="skill"><img src="https://img.icons8.com/color/512/pandas.png" alt="Pandas"><p>Pandas</p></div>
+    <div class="skill"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt1ICM_173Tjc7flx5jUOjWbis_6aKvsSx1Q&s" alt="Excel"><p>Excel</p></div>
+    <div class="skill"><img src="https://logos-world.net/wp-content/uploads/2022/02/Microsoft-Power-BI-Symbol.png" alt="Power BI"><p>Power BI</p></div>
+    <div class="skill"><img src="https://encrypted    -tbn0.gstatic.com/images?q=tbn:ANd9GcT6935wo8bLZh5FeafJEffqWKDOpNpx6UE5bg&s" alt="HTML5"><p>HTML5</p></div>
+    <div class="skill"><img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="CSS3"><p>CSS3</p></div>
+    <div class="skill"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript"><p>JavaScript</p></div>
+  </div>
+
+  <div class="projects" id="projects">
+    <h1>Projects</h1>
+    <div class="projects-container">
+      <div class="project">
+        <img src="https://static.vecteezy.com/system/resources/previews/020/274/037/non_2x/dashboard-icon-for-your-website-design-logo-app-ui-free-vector.jpg" alt="E-commerce Sales Dashboard">
+        <h2>E-commerce Sales Dashboard</h2>
+        <p>A comprehensive dashboard to analyze e-commerce sales data, providing insights into sales trends and performance metrics.</p>
+      </div>
+      <div class="project">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/07712d52323517.5608d99892165.png" alt="Virtual Assistant">
+        <h2>Virtual Assistant</h2>
+        <p>A virtual assistant built using HTML, CSS, and JavaScript to automate tasks and improve productivity.</p>
+      </div>
+      <div class="project">
+        <img src="https://img.freepik.com/free-vector/gym-logo-template_1061-26.jpg" alt="Gym Website">
+        <h2>Gym Website</h2>
+        <p>A responsive gym website built using HTML, CSS, and JavaScript. Includes landing page, trainer info, and contact form.</p>
+      </div>
+      <div class="project">
+        <img src="https://cdn-icons-png.flaticon.com/512/888/888879.png" alt="Hospital Management System">
+        <h2>Hospital Management System</h2>
+        <p>A desktop-based hospital management system developed using Python to manage patient records, appointments, and billing.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="education" id="education">
+    <h1>Education</h1>
+    <div class="education-container">
+      <div class="education-item">
+        <h2>High School (2020)</h2>
+        <p>Percentage: 75%</p>
+      </div>
+      <div class="education-item">
+        <h2>Intermediate (2022)</h2>
+        <p>Percentage: 65%</p>
+      </div>
+      <div class="education-item">
+        <h2>B.Tech (2022 - Present)</h2>
+        <p>Currently Pursuing</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact" id="contact">
+    <h1>Contact</h1>
+    <p>Email: <a href="mailto:yadavgovind112005@gmail.com">yadavgovind112005@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/govind-yadav-813737338" target="_blank">https://www.linkedin.com/in/govind-yadav-813737338</a></p>
+  </div>
+</body>
+</html>
